@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/constants/constants.dart';
+import '../../utils/constants/constants.dart';
 import './widgets/widgets.dart';
 
 class WelcomeScreen extends StatefulWidget {

@@ -4,16 +4,17 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
 import '/utils/constants/constants.dart';
+import '/screens/signin/signin_screen.dart';
 import '/widgets/widgets.dart';
 
 class WelcomeWidget extends StatefulWidget {
+  const WelcomeWidget({super.key});
+
   @override
   State<WelcomeWidget> createState() => _WelcomeWidgetState();
 }
 
 class _WelcomeWidgetState extends State<WelcomeWidget> {
-  CarouselController _controller = CarouselController();
-
   int _current = 0;
 
   var images = [
@@ -101,7 +102,10 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                             title:
                                 AppLocalizations.of(context)?.continueButton ??
                                     "",
-                            onPress: () {},
+                            onPress: () {
+                              Navigator.of(context)
+                                  .pushNamed(SigninScreen.routeName);
+                            },
                           )
                         ],
                       ),

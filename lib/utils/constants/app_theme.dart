@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomColors {
   static const scaffoldBackground = Color(0xFFF8F8F8);
+  static const darkText = Color(0xFF11112D);
   static const lightText = Color(0xFF8C8C8C);
   static const gradientLight = Color.fromRGBO(253, 240, 88, 1);
   static const gradientDark = Color.fromRGBO(255, 203, 5, 1);
@@ -20,13 +21,14 @@ class AppFonts {
 class AppTextStyles {
   static const largeLabel = TextStyle(
     fontFamily: AppFonts.extraBold,
+    color: CustomColors.darkText,
     fontSize: 32,
     fontWeight: FontWeight.w700,
   );
 
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
   );
@@ -35,7 +37,14 @@ class AppTextStyles {
     fontFamily: AppFonts.extraBold,
     fontSize: 18,
     fontWeight: FontWeight.w700,
-    color: Colors.black,
+    color: CustomColors.darkText,
+  );
+
+  static const titleStyle = TextStyle(
+    fontFamily: AppFonts.bold,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: CustomColors.darkText,
   );
 }
 
@@ -46,4 +55,7 @@ class AppSpacing {
   static const medium = 12.0;
   static const large = 16.0;
   static const xLarge = 20.0;
+  static const twoXL = 24.0;
+  static const threeXL = 28.0;
+  static const fourXL = 32.0;
 }
