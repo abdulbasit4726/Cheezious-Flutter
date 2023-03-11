@@ -5,5 +5,6 @@ class ImageNames {
   static const String cheeziousLogoText =
       "assets/images/cheezious_logo_text.png";
   static const String slide1 = "assets/images/slide1.png";
-  static const String arrow_left = "assets/images/arrow_left.png";
+  static const String arrowleft = "assets/images/arrow_left.png";
+  static const String headset = "assets/images/headset.png";
 }

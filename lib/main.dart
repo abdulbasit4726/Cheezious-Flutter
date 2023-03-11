@@ -19,12 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cheezious',
       debugShowCheckedModeBanner: false,
-      supportedLocales: L10n.all,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: ThemeData(
         scaffoldBackgroundColor: CustomColors.scaffoldBackground,
         fontFamily: "Manrope",

@@ -1,6 +1,8 @@
 {
     "welcomeMessage" : "WELCOME TO THE CHEEZIOUS",
-    "continueButton" : "CONTINUE"
+    "continueButton" : "CONTINUE",
+    "feelingHungry" : "Hey there, feeling hungry?",
+    "lets_enjoy" : "Let's enjoy your food with cheezious"
 
     
 }

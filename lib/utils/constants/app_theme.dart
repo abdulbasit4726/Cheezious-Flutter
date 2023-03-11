@@ -19,13 +19,6 @@ class AppFonts {
 }
 
 class AppTextStyles {
-  static const largeLabel = TextStyle(
-    fontFamily: AppFonts.extraBold,
-    color: CustomColors.darkText,
-    fontSize: 32,
-    fontWeight: FontWeight.w700,
-  );
-
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
     fontSize: 15,
@@ -36,6 +29,13 @@ class AppTextStyles {
   static const gradientButtonStyle = TextStyle(
     fontFamily: AppFonts.extraBold,
     fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: CustomColors.darkText,
+  );
+
+  static const largeTitle = TextStyle(
+    fontFamily: AppFonts.bold,
+    fontSize: 24,
     fontWeight: FontWeight.w700,
     color: CustomColors.darkText,
   );

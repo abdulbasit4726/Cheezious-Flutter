@@ -89,9 +89,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         children: [
                           const Spacer(flex: 2),
                           Text(
-                              AppLocalizations.of(context)?.welcomeMessage ??
-                                  "",
-                              style: AppTextStyles.largeLabel),
+                            AppLocalizations.of(context)?.welcomeMessage ?? "",
+                            style: const TextStyle(
+                              fontFamily: AppFonts.extraBold,
+                              color: CustomColors.darkText,
+                              fontSize: 28,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
                           const Spacer(),
                           const Text(
                             'Lorem ipsum dolor sit amet consectetur. Non cursus eu velit ultrices vel. Dignissim ut et at.',

@@ -6,12 +6,14 @@ class CustomAppBar extends StatelessWidget {
   bool showLeftIcon;
   String title;
   String subtitle;
+  Widget? rightActions;
 
   CustomAppBar({
     super.key,
     this.showLeftIcon = true,
     this.title = "",
     this.subtitle = "",
+    this.rightActions,
   });
 
   @override
@@ -29,7 +31,7 @@ class CustomAppBar extends StatelessWidget {
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),
                   icon: Image.asset(
-                    ImageNames.arrow_left,
+                    ImageNames.arrowleft,
                     width: 24,
                     height: 24,
                   ),
@@ -46,6 +48,7 @@ class CustomAppBar extends StatelessWidget {
                 ),
               ),
               const Spacer(),
+              rightActions ?? Container()
             ],
           ),
           Padding(
