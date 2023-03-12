@@ -6,6 +6,7 @@ class CustomColors {
   static const lightText = Color(0xFF8C8C8C);
   static const gradientLight = Color.fromRGBO(253, 240, 88, 1);
   static const gradientDark = Color.fromRGBO(255, 203, 5, 1);
+  static const secondary = Color(0xFFF15B25);
 }
 
 class AppFonts {
