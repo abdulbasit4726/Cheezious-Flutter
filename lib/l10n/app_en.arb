@@ -2,7 +2,12 @@
     "welcomeMessage" : "WELCOME TO THE CHEEZIOUS",
     "continueButton" : "CONTINUE",
     "feelingHungry" : "Hey there, feeling hungry?",
-    "lets_enjoy" : "Let's enjoy your food with cheezious"
-
+    "lets_enjoy" : "Let's enjoy your food with cheezious",
+    "signin_with_phone": "Sign in with your phone",
+    "google": "Continue with google",
+    "apple": "Continue with apple",
+    "facebook": "Continue with facebook",
+    "have_account": "I have an account",
+    "guest": "Continue as a guest"
     
 }

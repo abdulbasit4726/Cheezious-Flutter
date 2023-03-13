@@ -7,6 +7,7 @@ class CustomColors {
   static const gradientLight = Color.fromRGBO(253, 240, 88, 1);
   static const gradientDark = Color.fromRGBO(255, 203, 5, 1);
   static const secondary = Color(0xFFF15B25);
+  static const facebook = Color(0xFF3975EA);
 }
 
 class AppFonts {
@@ -22,16 +23,30 @@ class AppFonts {
 class AppTextStyles {
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
   );
 
-  static const gradientButtonStyle = TextStyle(
+  static const darkButtonStyle = TextStyle(
     fontFamily: AppFonts.extraBold,
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: FontWeight.w700,
     color: CustomColors.darkText,
+  );
+
+  static const whiteButtonStyle = TextStyle(
+    fontFamily: AppFonts.extraBold,
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+  );
+
+  static const secondaryButtonStyle = TextStyle(
+    fontFamily: AppFonts.extraBold,
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: CustomColors.secondary,
   );
 
   static const largeTitle = TextStyle(

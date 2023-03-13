@@ -5,18 +5,20 @@ import '/utils/constants/constants.dart';
 class CustomButton extends StatelessWidget {
   VoidCallback onPress;
   String title;
-  bool isGradient;
   ButtonStyle? style;
   double widht;
   double height;
+  String? leftIcon;
+  TextStyle? textStyle;
 
   CustomButton({
     required this.onPress,
     required this.title,
-    this.isGradient = true,
     this.style,
     this.widht = double.infinity,
     this.height = 50,
+    this.leftIcon,
+    this.textStyle,
   });
 
   @override
@@ -24,14 +26,16 @@ class CustomButton extends StatelessWidget {
     return Container(
       width: widht,
       height: height,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        gradient: const LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [CustomColors.gradientLight, CustomColors.gradientDark],
-        ),
-      ),
+      decoration: style != null
+          ? const BoxDecoration()
+          : BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              gradient: const LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [CustomColors.gradientLight, CustomColors.gradientDark],
+              ),
+            ),
       child: ElevatedButton(
         onPressed: onPress,
         style: style ??
@@ -42,9 +46,25 @@ class CustomButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
-        child: Text(
-          title,
-          style: AppTextStyles.gradientButtonStyle,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            leftIcon != null
+                ? Image.asset(
+                    leftIcon ?? '',
+                    width: 24,
+                    height: 24,
+                    fit: BoxFit.contain,
+                  )
+                : const SizedBox.shrink(),
+            Padding(
+              padding: const EdgeInsets.only(left: AppSpacing.medium),
+              child: Text(
+                title,
+                style: textStyle ?? AppTextStyles.darkButtonStyle,
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -7,6 +8,7 @@ import '/utils/constants/constants.dart';
 import './l10n/l10n.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
   runApp(const MyApp());
 }
 
@@ -24,6 +26,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: CustomColors.scaffoldBackground,
         fontFamily: "Manrope",
+        // appBarTheme: const AppBarTheme(
+        //   systemOverlayStyle: SystemUiOverlayStyle(
+        //     statusBarColor: Colors.white,
+        //     statusBarIconBrightness: Brightness.dark, // for android
+        //     statusBarBrightness: Brightness.dark, // for ios
+        //   ),
+        // ),
       ),
       home: WelcomeScreen(),
       routes: {
