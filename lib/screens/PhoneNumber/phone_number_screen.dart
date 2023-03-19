@@ -63,28 +63,26 @@ class PhoneNumberScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(AppSpacing.large),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        AppLocalizations.of(context)?.phone_number ?? '',
-                        style: AppTextStyles.largeTitle,
+                const SizedBox(height: AppSpacing.large),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppLocalizations.of(context)?.phone_number ?? '',
+                      style: AppTextStyles.largeTitle,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: AppSpacing.small),
+                      child: Text(
+                        AppLocalizations.of(context)?.send_code_message ?? '',
+                        style: AppTextStyles.regularTextLight,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: AppSpacing.small),
-                        child: Text(
-                          AppLocalizations.of(context)?.send_code_message ?? '',
-                          style: AppTextStyles.regularTextLight,
-                        ),
-                      ),
-                      const SizedBox(height: 35),
-                      phoneNumberField(),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(height: 35),
+                    phoneNumberField(),
+                  ],
                 ),
-                Spacer(),
+                const Spacer(),
                 CustomButton(
                   leftIcon: ImageNames.chat,
                   onPress: () {},
@@ -93,7 +91,7 @@ class PhoneNumberScreen extends StatelessWidget {
                           .toUpperCase() ??
                       '',
                 ),
-                SizedBox(height: AppSpacing.large),
+                const SizedBox(height: AppSpacing.large),
                 CustomButton(
                   leftIcon: ImageNames.whatsapp,
                   style: ElevatedButton.styleFrom(
