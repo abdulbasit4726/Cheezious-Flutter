@@ -1,44 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '/widgets/widgets.dart';
 import '/utils/constants/constants.dart';
+import '/screens/screens.dart';
 
 class SigninScreen extends StatelessWidget {
   static const routeName = '/SigninScreen';
-  final _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
-
-  // Widget phoneNumberField() {
-  //   return IntlPhoneField(
-  //     initialCountryCode: 'PK',
-  //     cursorColor: CustomColors.secondary,
-  //     dropdownIcon: const Icon(
-  //       Icons.keyboard_arrow_down_sharp,
-  //       color: CustomColors.lightText,
-  //     ),
-  //     flagsButtonPadding: const EdgeInsets.only(left: 16),
-  //     showCountryFlag: false,
-  //     dropdownIconPosition: IconPosition.trailing,
-  //     decoration: InputDecoration(
-  //       contentPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-  //       hintText: 'Phone Number',
-  //       border: OutlineInputBorder(
-  //         borderRadius: BorderRadius.circular(5),
-  //         borderSide: const BorderSide(
-  //           color: CustomColors.lightText,
-  //         ),
-  //       ),
-  //       focusedBorder: OutlineInputBorder(
-  //         borderRadius: BorderRadius.circular(5),
-  //         borderSide: const BorderSide(
-  //           color: CustomColors.secondary,
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +59,8 @@ class SigninScreen extends StatelessWidget {
                   CustomButton(
                     leftIcon: ImageNames.phoneBlack,
                     onPress: () {
-                      print("Sign in ");
+                      Navigator.of(context)
+                          .pushNamed(PhoneNumberScreen.routeName);
                     },
                     title: AppLocalizations.of(context)
                             ?.signin_with_phone
@@ -190,6 +159,7 @@ class SigninScreen extends StatelessWidget {
                       style: AppTextStyles.secondaryButtonStyle,
                     ),
                   ),
+                  const SizedBox(height: AppSpacing.large),
                 ],
               ),
             ),

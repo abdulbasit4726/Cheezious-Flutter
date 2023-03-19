@@ -8,6 +8,10 @@
     "apple": "Continue with apple",
     "facebook": "Continue with facebook",
     "have_account": "I have an account",
-    "guest": "Continue as a guest"
-    
+    "guest": "Continue as a guest",
+
+    "phone_number": "Enter your cell phone number",
+    "send_code_message" : "We will send you a code to confirm it",
+    "receive_code_sms": "Receive code with sms",
+    "receive_code_whatsapp": "Receive code by whatsapp"
 }

@@ -11,4 +11,6 @@ class ImageNames {
   static const String facebook = "assets/images/facebook.png";
   static const String google = "assets/images/google.png";
   static const String phoneBlack = "assets/images/phone-black.png";
+  static const String chat = "assets/images/chat.png";
+  static const String whatsapp = "assets/images/whatsapp.png";
 }

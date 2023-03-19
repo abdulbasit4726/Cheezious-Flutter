@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
 import '/utils/constants/constants.dart';
-import '/screens/signin/signin_screen.dart';
+import '../../SignIn/signin_screen.dart';
 import '/widgets/widgets.dart';
 
 class WelcomeWidget extends StatefulWidget {

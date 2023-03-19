@@ -18,51 +18,46 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(AppSpacing.large),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              if (showLeftIcon)
-                IconButton(
-                  splashRadius: 24,
-                  padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),
-                  icon: Image.asset(
-                    ImageNames.arrowleft,
-                    width: 24,
-                    height: 24,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            if (showLeftIcon)
+              IconButton(
+                splashRadius: 24,
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+                icon: Image.asset(
+                  ImageNames.arrowleft,
+                  width: 24,
+                  height: 24,
                 ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: AppSpacing.large),
-                child: Text(
-                  title,
-                  style: AppTextStyles.titleStyle,
-                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
               ),
-              const Spacer(),
-              rightActions ?? Container()
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-                top: AppSpacing.xSmall,
-                left:
-                    showLeftIcon ? (AppSpacing.large + 24) : AppSpacing.large),
-            child: Text(
-              subtitle,
-              style: AppTextStyles.regularTextLight,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.large),
+              child: Text(
+                title,
+                style: AppTextStyles.titleStyle,
+              ),
             ),
+            const Spacer(),
+            rightActions ?? Container()
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: AppSpacing.xSmall,
+              left: showLeftIcon ? (AppSpacing.large + 24) : AppSpacing.large),
+          child: Text(
+            subtitle,
+            style: AppTextStyles.regularTextLight,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

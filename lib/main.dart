@@ -26,17 +26,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: CustomColors.scaffoldBackground,
         fontFamily: "Manrope",
-        // appBarTheme: const AppBarTheme(
-        //   systemOverlayStyle: SystemUiOverlayStyle(
-        //     statusBarColor: Colors.white,
-        //     statusBarIconBrightness: Brightness.dark, // for android
-        //     statusBarBrightness: Brightness.dark, // for ios
-        //   ),
-        // ),
       ),
       home: WelcomeScreen(),
       routes: {
         SigninScreen.routeName: (ctx) => SigninScreen(),
+        PhoneNumberScreen.routeName: (ctx) => PhoneNumberScreen(),
       },
     );
   }

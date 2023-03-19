@@ -23,7 +23,7 @@ class AppFonts {
 class AppTextStyles {
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
   );
