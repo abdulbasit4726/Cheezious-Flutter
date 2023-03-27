@@ -28,7 +28,7 @@ class SigninScreen extends StatelessWidget {
                     children: [
                       CustomIcon(
                         icon: ImageNames.headset,
-                        iconSize: 28.0,
+                        iconSize: 24.0,
                         onPress: () {
                           print("Headset");
                         },

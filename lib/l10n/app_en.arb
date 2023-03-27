@@ -13,5 +13,6 @@
     "phone_number": "Enter your cell phone number",
     "send_code_message" : "We will send you a code to confirm it",
     "receive_code_sms": "Receive code with sms",
-    "receive_code_whatsapp": "Receive code by whatsapp"
+    "receive_code_whatsapp": "Receive code by whatsapp",
+    "enter_code_send": "Enter the code we sent"
 }

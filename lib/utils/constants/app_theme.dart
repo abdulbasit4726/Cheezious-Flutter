@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomColors {
   static const scaffoldBackground = Color(0xFFF8F8F8);
+  static const lightGray = Color(0xFFF2F2F2);
   static const darkText = Color(0xFF11112D);
   static const lightText = Color(0xFF8C8C8C);
   static const gradientLight = Color.fromRGBO(253, 240, 88, 1);
@@ -23,9 +24,16 @@ class AppFonts {
 class AppTextStyles {
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
+  );
+
+  static const regularText = TextStyle(
+    fontFamily: AppFonts.regular,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: CustomColors.darkText,
   );
 
   static const darkButtonStyle = TextStyle(

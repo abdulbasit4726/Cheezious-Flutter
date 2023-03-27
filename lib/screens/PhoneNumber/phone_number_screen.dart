@@ -4,6 +4,7 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '/widgets/widgets.dart';
 import '/utils/constants/constants.dart';
+import '../screens.dart';
 
 class PhoneNumberScreen extends StatelessWidget {
   static const routeName = "/PhoneNumberScreen";
@@ -46,18 +47,21 @@ class PhoneNumberScreen extends StatelessWidget {
     return GestureDetector(
       onTap: FocusScope.of(context).unfocus,
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        // resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Container(
             height: screenSize.height,
-            padding: const EdgeInsets.all(AppSpacing.large),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.large,
+              vertical: AppSpacing.small,
+            ),
             child: Column(
               children: [
                 CustomAppBar(
                   title: "Back",
                   rightActions: CustomIcon(
                     icon: ImageNames.headset,
-                    iconSize: 28.0,
+                    iconSize: 24.0,
                     onPress: () {
                       print("Headset");
                     },
@@ -85,7 +89,10 @@ class PhoneNumberScreen extends StatelessWidget {
                 const Spacer(),
                 CustomButton(
                   leftIcon: ImageNames.chat,
-                  onPress: () {},
+                  onPress: () {
+                    Navigator.of(context)
+                        .pushNamed(OTPVerificationScreen.routeName);
+                  },
                   title: AppLocalizations.of(context)
                           ?.receive_code_sms
                           .toUpperCase() ??
@@ -106,7 +113,7 @@ class PhoneNumberScreen extends StatelessWidget {
                     ),
                   ),
                   onPress: () {
-                    print('Google');
+                    print('Whatsapp');
                   },
                   title: AppLocalizations.of(context)
                           ?.receive_code_whatsapp

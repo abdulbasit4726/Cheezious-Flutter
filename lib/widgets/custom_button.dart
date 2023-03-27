@@ -60,7 +60,7 @@ class CustomButton extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: AppSpacing.medium),
               child: Text(
-                title,
+                title.toUpperCase(),
                 style: textStyle ?? AppTextStyles.darkButtonStyle,
               ),
             ),

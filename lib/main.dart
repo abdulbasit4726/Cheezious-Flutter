@@ -1,3 +1,4 @@
+import 'package:cheezious_user/screens/OTPVerification/otp_verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SigninScreen.routeName: (ctx) => SigninScreen(),
         PhoneNumberScreen.routeName: (ctx) => PhoneNumberScreen(),
+        OTPVerificationScreen.routeName: (ctx) => OTPVerificationScreen(),
       },
     );
   }
