@@ -9,6 +9,7 @@ class CustomColors {
   static const gradientDark = Color.fromRGBO(255, 203, 5, 1);
   static const secondary = Color(0xFFF15B25);
   static const facebook = Color(0xFF3975EA);
+  static const green = Color(0xFF1ED300);
 }
 
 class AppFonts {
@@ -31,7 +32,7 @@ class AppTextStyles {
 
   static const regularText = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
     color: CustomColors.darkText,
   );

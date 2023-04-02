@@ -18,27 +18,27 @@ class CustomInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: keyboardType ?? TextInputType.text,
-      controller: controller,
-      cursorColor: CustomColors.secondary,
-      decoration: InputDecoration(
-        contentPadding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-        hintText: placeholder,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: const BorderSide(
-            color: CustomColors.lightText,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: const BorderSide(
-            color: CustomColors.secondary,
-          ),
-        ),
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: AppSpacing.xSmall,
+        horizontal: AppSpacing.large,
       ),
-      validator: validator,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+      ),
+      child: TextFormField(
+        keyboardType: keyboardType ?? TextInputType.text,
+        controller: controller,
+        cursorColor: CustomColors.darkText,
+        decoration: InputDecoration(
+          labelStyle: AppTextStyles.regularText,
+          hintStyle: AppTextStyles.regularTextLight,
+          hintText: placeholder,
+          border: InputBorder.none,
+        ),
+        validator: validator,
+      ),
     );
   }
 }

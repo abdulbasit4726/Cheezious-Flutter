@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '/utils/constants/constants.dart';
 import '/widgets/widgets.dart';
 import './widgets/otp_container.dart';
+import '/screens/screens.dart';
 
 class OTPVerificationScreen extends StatelessWidget {
   static const routeName = '/OTPVerificationScreen';
@@ -100,7 +101,11 @@ class OTPVerificationScreen extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                CustomButton(onPress: () {}, title: 'Next')
+                CustomButton(
+                    onPress: () {
+                      Navigator.of(context).pushNamed(UsernameScreen.routeName);
+                    },
+                    title: 'Next')
               ],
             ),
           ),

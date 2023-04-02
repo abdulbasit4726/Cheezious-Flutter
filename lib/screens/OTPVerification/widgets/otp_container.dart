@@ -8,7 +8,7 @@ class OTPContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.width / 7.5,
+      height: screenSize.width / 7,
       width: screenSize.width / 7.5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

@@ -33,6 +33,11 @@ class MyApp extends StatelessWidget {
         SigninScreen.routeName: (ctx) => SigninScreen(),
         PhoneNumberScreen.routeName: (ctx) => PhoneNumberScreen(),
         OTPVerificationScreen.routeName: (ctx) => OTPVerificationScreen(),
+        UsernameScreen.routeName: (ctx) => UsernameScreen(),
+        UserEmailScreen.routeName: (ctx) => UserEmailScreen(),
+        TermsAndConditionsScreen.routeName: (ctx) => TermsAndConditionsScreen(),
+        RegistrationSuccessScreen.routeName: (ctx) =>
+            RegistrationSuccessScreen(),
       },
     );
   }
