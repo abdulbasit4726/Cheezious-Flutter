@@ -6,3 +6,4 @@ export 'Username/username_screen.dart';
 export 'UserEmail/user_email_screen.dart';
 export 'TermsAndConditions/terms_and_conditions_screen.dart';
 export 'RegistrationSuccess/registration_success_screen.dart';
+export 'BottomAppNavigation/bottom_app_navigation_screen.dart';

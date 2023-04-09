@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 
 import '/utils/constants/constants.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   VoidCallback onPress;
   String title;
-  ButtonStyle? style;
+  Decoration? decoration;
   double widht;
   double height;
   String? leftIcon;
@@ -14,7 +15,7 @@ class CustomButton extends StatelessWidget {
   CustomButton({
     required this.onPress,
     required this.title,
-    this.style,
+    this.decoration,
     this.widht = double.infinity,
     this.height = 50,
     this.leftIcon,
@@ -22,13 +23,32 @@ class CustomButton extends StatelessWidget {
   });
 
   @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton>
+    with TickerProviderStateMixin {
+  late AnimationController _animationController;
+
+  @override
+  void initState() {
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 200),
+    );
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      width: widht,
-      height: height,
-      decoration: style != null
-          ? const BoxDecoration()
-          : BoxDecoration(
+    return ScaleTap(
+      onPressed: widget.onPress,
+      duration: const Duration(milliseconds: 700),
+      child: Container(
+        width: widget.widht,
+        height: widget.height,
+        decoration: widget.decoration ??
+            BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               gradient: const LinearGradient(
                 begin: Alignment.topCenter,
@@ -36,22 +56,12 @@ class CustomButton extends StatelessWidget {
                 colors: [CustomColors.gradientLight, CustomColors.gradientDark],
               ),
             ),
-      child: ElevatedButton(
-        onPressed: onPress,
-        style: style ??
-            ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent,
-              shadowColor: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
-              ),
-            ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            leftIcon != null
+            widget.leftIcon != null
                 ? Image.asset(
-                    leftIcon ?? '',
+                    widget.leftIcon ?? '',
                     width: 24,
                     height: 24,
                     fit: BoxFit.contain,
@@ -60,8 +70,8 @@ class CustomButton extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: AppSpacing.medium),
               child: Text(
-                title.toUpperCase(),
-                style: textStyle ?? AppTextStyles.darkButtonStyle,
+                widget.title.toUpperCase(),
+                style: widget.textStyle ?? AppTextStyles.darkButtonStyle,
               ),
             ),
           ],

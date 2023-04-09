@@ -71,16 +71,9 @@ class SigninScreen extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: AppSpacing.large),
                   child: CustomButton(
                     leftIcon: ImageNames.google,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          color: Colors.black12,
-                          width: 0.5,
-                        ),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     onPress: () {
                       print('Google');
@@ -91,12 +84,9 @@ class SigninScreen extends StatelessWidget {
                 ),
                 CustomButton(
                   leftIcon: ImageNames.apple,
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    backgroundColor: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   onPress: () {
                     print('Apple');
@@ -116,12 +106,9 @@ class SigninScreen extends StatelessWidget {
                         AppLocalizations.of(context)?.facebook.toUpperCase() ??
                             '',
                     textStyle: AppTextStyles.whiteButtonStyle,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: CustomColors.facebook,
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
-                      ),
+                    decoration: BoxDecoration(
+                      color: CustomColors.facebook,
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     leftIcon: ImageNames.facebook,
                   ),

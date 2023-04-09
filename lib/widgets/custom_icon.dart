@@ -27,7 +27,7 @@ class CustomIcon extends StatelessWidget {
       child: IconButton(
         padding: EdgeInsets.zero,
         constraints: const BoxConstraints(),
-        splashRadius: 1.0,
+        // splashRadius: 1.0,
         icon: Image.asset(
           icon,
         ),

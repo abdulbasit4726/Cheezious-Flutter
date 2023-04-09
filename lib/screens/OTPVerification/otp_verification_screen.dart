@@ -9,6 +9,13 @@ import '/screens/screens.dart';
 class OTPVerificationScreen extends StatelessWidget {
   static const routeName = '/OTPVerificationScreen';
 
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
+  TextEditingController controller3 = TextEditingController();
+  TextEditingController controller4 = TextEditingController();
+  TextEditingController controller5 = TextEditingController();
+  TextEditingController controller6 = TextEditingController();
+
   OTPVerificationScreen({super.key});
 
   @override
@@ -57,12 +64,24 @@ class OTPVerificationScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    OTPContainer(),
-                    OTPContainer(),
-                    OTPContainer(),
-                    OTPContainer(),
-                    OTPContainer(),
-                    OTPContainer(),
+                    OTPContainer(
+                      controller: controller1,
+                    ),
+                    OTPContainer(
+                      controller: controller2,
+                    ),
+                    OTPContainer(
+                      controller: controller3,
+                    ),
+                    OTPContainer(
+                      controller: controller4,
+                    ),
+                    OTPContainer(
+                      controller: controller5,
+                    ),
+                    OTPContainer(
+                      controller: controller6,
+                    ),
                   ],
                 ),
                 const SizedBox(height: 35),

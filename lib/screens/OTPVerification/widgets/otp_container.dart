@@ -4,6 +4,10 @@ import 'package:flutter/services.dart';
 import '/utils/constants/app_theme.dart';
 
 class OTPContainer extends StatelessWidget {
+  TextEditingController controller;
+
+  OTPContainer({required this.controller});
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -32,6 +36,7 @@ class OTPContainer extends StatelessWidget {
             LengthLimitingTextInputFormatter(1),
             FilteringTextInputFormatter.digitsOnly,
           ],
+          controller: controller,
         ),
       ),
     );

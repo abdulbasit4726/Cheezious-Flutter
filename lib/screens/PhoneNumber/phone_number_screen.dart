@@ -101,16 +101,9 @@ class PhoneNumberScreen extends StatelessWidget {
                 const SizedBox(height: AppSpacing.large),
                 CustomButton(
                   leftIcon: ImageNames.whatsapp,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                      side: const BorderSide(
-                        color: Colors.black12,
-                        width: 0.5,
-                      ),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   onPress: () {
                     print('Whatsapp');

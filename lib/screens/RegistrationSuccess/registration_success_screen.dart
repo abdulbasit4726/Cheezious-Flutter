@@ -41,7 +41,7 @@ class RegistrationSuccessScreen extends StatelessWidget {
                   height: AppSpacing.large,
                 ),
                 const Text(
-                  'Your account has been create successfully.',
+                  'Your account has been created successfully.',
                   style: AppTextStyles.regularText,
                 ),
                 const Spacer(

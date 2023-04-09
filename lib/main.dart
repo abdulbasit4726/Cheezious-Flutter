@@ -38,6 +38,8 @@ class MyApp extends StatelessWidget {
         TermsAndConditionsScreen.routeName: (ctx) => TermsAndConditionsScreen(),
         RegistrationSuccessScreen.routeName: (ctx) =>
             RegistrationSuccessScreen(),
+        BottomAppNavigationScreen.routeName: (ctx) =>
+            BottomAppNavigationScreen(),
       },
     );
   }
