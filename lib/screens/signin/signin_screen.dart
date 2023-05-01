@@ -18,10 +18,14 @@ class SigninScreen extends StatelessWidget {
         resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.large),
+            padding: const EdgeInsets.only(
+              left: AppSpacing.large,
+              top: AppSpacing.small,
+              right: AppSpacing.large,
+              bottom: AppSpacing.small,
+            ),
             child: Column(
               children: [
-                const SizedBox(height: AppSpacing.large),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -121,7 +125,6 @@ class SigninScreen extends StatelessWidget {
                     style: AppTextStyles.secondaryButtonStyle,
                   ),
                 ),
-                const SizedBox(height: AppSpacing.large),
               ],
             ),
           ),

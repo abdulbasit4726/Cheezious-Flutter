@@ -49,11 +49,12 @@ class PhoneNumberScreen extends StatelessWidget {
       child: Scaffold(
         // resizeToAvoidBottomInset: false,
         body: SafeArea(
-          child: Container(
-            height: screenSize.height,
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.large,
-              vertical: AppSpacing.small,
+          child: Padding(
+            padding: const EdgeInsets.only(
+              left: AppSpacing.large,
+              top: AppSpacing.small,
+              right: AppSpacing.large,
+              bottom: AppSpacing.large,
             ),
             child: Column(
               children: [
@@ -67,7 +68,6 @@ class PhoneNumberScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                const SizedBox(height: AppSpacing.large),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

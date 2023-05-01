@@ -25,9 +25,11 @@ class OTPVerificationScreen extends StatelessWidget {
       child: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.large,
-              vertical: AppSpacing.small,
+            padding: const EdgeInsets.only(
+              left: AppSpacing.large,
+              top: AppSpacing.small,
+              right: AppSpacing.large,
+              bottom: AppSpacing.large,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +44,6 @@ class OTPVerificationScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                const SizedBox(height: AppSpacing.large),
                 Text(
                   AppLocalizations.of(context)?.enter_code_send ?? '',
                   style: AppTextStyles.largeTitle,
@@ -60,7 +61,7 @@ class OTPVerificationScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 35),
+                const SizedBox(height: 28),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -84,7 +85,7 @@ class OTPVerificationScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 35),
+                const SizedBox(height: 28),
                 Row(
                   children: [
                     const Text(

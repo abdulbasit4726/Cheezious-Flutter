@@ -21,7 +21,7 @@ class CustomIcon extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(AppSpacing.small),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(iconSize),
       ),
       child: IconButton(

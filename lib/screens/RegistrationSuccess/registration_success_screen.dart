@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '/utils/constants/constants.dart';
+import '/utils/utils.dart';
 import '/widgets/widgets.dart';
+import '/screens/screens.dart';
 
 class RegistrationSuccessScreen extends StatelessWidget {
   static const routeName = '/RegistrationSuccessScreen';
@@ -47,7 +49,12 @@ class RegistrationSuccessScreen extends StatelessWidget {
                 const Spacer(
                   flex: 2,
                 ),
-                CustomButton(onPress: () {}, title: 'Continue to home screen')
+                CustomButton(
+                    onPress: () {
+                      Navigator.of(context)
+                          .pushNamed(BottomAppNavigationScreen.routeName);
+                    },
+                    title: 'Continue to home screen')
               ],
             ),
           ),

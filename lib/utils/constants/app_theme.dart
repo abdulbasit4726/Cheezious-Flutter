@@ -59,7 +59,7 @@ class AppTextStyles {
   );
 
   static const largeTitle = TextStyle(
-    fontFamily: AppFonts.bold,
+    fontFamily: AppFonts.extraBold,
     fontSize: 24,
     fontWeight: FontWeight.w700,
     color: CustomColors.darkText,
@@ -69,6 +69,13 @@ class AppTextStyles {
     fontFamily: AppFonts.bold,
     fontSize: 18,
     fontWeight: FontWeight.w700,
+    color: CustomColors.darkText,
+  );
+
+  static const bottomTabLabel = TextStyle(
+    fontFamily: AppFonts.regular,
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
     color: CustomColors.darkText,
   );
 }

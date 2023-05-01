@@ -16,9 +16,11 @@ class UserEmailScreen extends StatelessWidget {
       child: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.large,
-              vertical: AppSpacing.small,
+            padding: const EdgeInsets.only(
+              left: AppSpacing.large,
+              top: AppSpacing.small,
+              right: AppSpacing.large,
+              bottom: AppSpacing.large,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +35,6 @@ class UserEmailScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                const SizedBox(height: AppSpacing.large),
                 const Text(
                   'Finally, add your email',
                   style: AppTextStyles.largeTitle,

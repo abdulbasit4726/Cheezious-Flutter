@@ -24,9 +24,11 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
       child: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.large,
-              vertical: AppSpacing.small,
+            padding: const EdgeInsets.only(
+              left: AppSpacing.large,
+              top: AppSpacing.small,
+              right: AppSpacing.large,
+              bottom: AppSpacing.large,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +43,6 @@ class _TermsAndConditionsScreenState extends State<TermsAndConditionsScreen> {
                     },
                   ),
                 ),
-                const SizedBox(height: AppSpacing.large),
                 const Text(
                   'Terms and Conditions',
                   style: AppTextStyles.largeTitle,
