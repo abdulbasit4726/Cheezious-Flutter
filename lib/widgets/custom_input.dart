@@ -24,7 +24,7 @@ class CustomInput extends StatelessWidget {
         horizontal: AppSpacing.large,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(5),
         color: Colors.white,
       ),
       child: TextFormField(

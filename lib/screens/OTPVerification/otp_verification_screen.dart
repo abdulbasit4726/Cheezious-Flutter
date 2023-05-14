@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 import '/utils/constants/constants.dart';
 import '/widgets/widgets.dart';
@@ -62,29 +65,40 @@ class OTPVerificationScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 28),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    OTPContainer(
-                      controller: controller1,
-                    ),
-                    OTPContainer(
-                      controller: controller2,
-                    ),
-                    OTPContainer(
-                      controller: controller3,
-                    ),
-                    OTPContainer(
-                      controller: controller4,
-                    ),
-                    OTPContainer(
-                      controller: controller5,
-                    ),
-                    OTPContainer(
-                      controller: controller6,
-                    ),
-                  ],
+                OtpTextField(
+                  numberOfFields: 6,
+                  showFieldAsBox: true,
+                  cursorColor: CustomColors.secondary,
+                  borderWidth: 0,
+                  focusedBorderColor: Colors.transparent,
+                  filled: true,
+                  fillColor: Colors.white,
+                  fieldWidth: ((MediaQuery.of(context).size.width / 6) - 14),
+                  textStyle: AppTextStyles.titleStyle,
                 ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     OTPContainer(
+                //       controller: controller1,
+                //     ),
+                //     OTPContainer(
+                //       controller: controller2,
+                //     ),
+                //     OTPContainer(
+                //       controller: controller3,
+                //     ),
+                //     OTPContainer(
+                //       controller: controller4,
+                //     ),
+                //     OTPContainer(
+                //       controller: controller5,
+                //     ),
+                //     OTPContainer(
+                //       controller: controller6,
+                //     ),
+                //   ],
+                // ),
                 const SizedBox(height: 28),
                 Row(
                   children: [
