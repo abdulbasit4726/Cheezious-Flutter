@@ -22,4 +22,5 @@ class ImageNames {
   static const String shopSelected = "assets/images/shop_selected.png";
   static const String shopUnselected = "assets/images/shop_unselected.png";
   static const String qrscan = "assets/images/qrscan.png";
+  static const String notification = "assets/images/bell.png";
 }

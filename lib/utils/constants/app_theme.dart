@@ -25,15 +25,22 @@ class AppFonts {
 class AppTextStyles {
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
   );
 
   static const regularText = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w400,
+    color: CustomColors.darkText,
+  );
+
+  static const regularTextSemiBold = TextStyle(
+    fontFamily: AppFonts.semiBold,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
     color: CustomColors.darkText,
   );
 

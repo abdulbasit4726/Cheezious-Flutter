@@ -68,7 +68,8 @@ class _CustomButtonState extends State<CustomButton>
                   )
                 : const SizedBox.shrink(),
             Padding(
-              padding: const EdgeInsets.only(left: AppSpacing.medium),
+              padding: EdgeInsets.only(
+                  left: widget.leftIcon != null ? AppSpacing.medium : 0),
               child: Text(
                 widget.title.toUpperCase(),
                 style: widget.textStyle ?? AppTextStyles.darkButtonStyle,

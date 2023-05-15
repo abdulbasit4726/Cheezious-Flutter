@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           //   onPrimary: CustomColors.secondary,
           // ),
         ),
-        home: WelcomeScreen(),
+        home: BottomAppNavigationScreen(),
         routes: {
           SigninScreen.routeName: (ctx) => SigninScreen(),
           PhoneNumberScreen.routeName: (ctx) => PhoneNumberScreen(),

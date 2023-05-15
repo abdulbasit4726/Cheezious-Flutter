@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 
 import '/utils/constants/constants.dart';
 
@@ -6,6 +7,7 @@ class CustomIcon extends StatelessWidget {
   Color backgroundColor;
   String icon;
   double iconSize;
+  bool isGradient;
   VoidCallback? onPress;
 
   CustomIcon({
@@ -13,26 +15,47 @@ class CustomIcon extends StatelessWidget {
     this.backgroundColor = Colors.white,
     this.iconSize = 24.0,
     this.onPress,
+    this.isGradient = false,
     required this.icon,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(AppSpacing.small),
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(iconSize),
-      ),
-      child: IconButton(
-        padding: EdgeInsets.zero,
-        constraints: const BoxConstraints(),
-        // splashRadius: 1.0,
-        icon: Image.asset(
-          icon,
+    return ScaleTap(
+      onPressed: onPress,
+      duration: const Duration(milliseconds: 700),
+      child: Container(
+        padding: const EdgeInsets.all(AppSpacing.small),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          gradient: isGradient
+              ? const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    CustomColors.gradientLight,
+                    CustomColors.gradientDark
+                  ],
+                )
+              : null,
+          borderRadius: BorderRadius.circular(iconSize),
         ),
-        iconSize: iconSize,
-        onPressed: onPress,
+        child: Image.asset(
+          icon,
+          width: iconSize,
+          height: iconSize,
+          fit: BoxFit.contain,
+        ),
+        // IconButton(
+        //   padding: EdgeInsets.zero,
+        //   constraints: const BoxConstraints(),
+        //   // splashRadius: 1.0,
+        //   icon: Image.asset(
+        //     icon,
+        //   ),
+        //   iconSize: iconSize,
+        //   onPressed: onPress,
+        // ),
       ),
     );
   }
