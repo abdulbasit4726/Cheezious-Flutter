@@ -4,6 +4,51 @@ import 'package:flutter/material.dart';
 import 'widgets.dart';
 
 class AppDrawer extends StatelessWidget {
+  final _drawerItems = [
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+    AppDrawerItem(
+      icon: ImageNames.notification,
+      title: "Order History",
+      onPress: () {
+        print("Hello");
+      },
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -14,11 +59,9 @@ class AppDrawer extends StatelessWidget {
             phoneNumber: "Unlock offers & discounts",
           ),
           const Divider(height: 0.5),
-          AppDrawerItem(
-            icon: ImageNames.notification,
-            title: "Order History",
-            onPress: () {
-              print("Hello");
+          ..._drawerItems.map(
+            (item) {
+              return Text('Hello');
             },
           ),
         ],

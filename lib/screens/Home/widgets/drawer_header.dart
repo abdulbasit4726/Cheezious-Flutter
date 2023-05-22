@@ -16,8 +16,9 @@ class AppDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.large),
-      height: 180,
+      padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.large, vertical: AppSpacing.medium),
+      height: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
