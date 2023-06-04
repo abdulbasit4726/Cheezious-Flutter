@@ -4,6 +4,7 @@ import '/utils/constants/constants.dart';
 import '/utils/utils.dart';
 import '/widgets/widgets.dart';
 import '/screens/screens.dart';
+import '../../navigators/navigators.dart';
 
 class RegistrationSuccessScreen extends StatelessWidget {
   static const routeName = '/RegistrationSuccessScreen';

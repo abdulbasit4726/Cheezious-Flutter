@@ -23,4 +23,17 @@ class ImageNames {
   static const String shopUnselected = "assets/images/shop_unselected.png";
   static const String qrscan = "assets/images/qrscan.png";
   static const String notification = "assets/images/bell.png";
+  static const String addressMark = "assets/images/address_mark.png";
+  static const String card = "assets/images/card.png";
+  static const String explore = "assets/images/explore.png";
+  static const String gift = "assets/images/gift.png";
+  static const String logout = "assets/images/logout.png";
+  static const String personStar = "assets/images/person_star.png";
+  static const String phoneWhite = "assets/images/phone_white.png";
+  static const String track = "assets/images/track.png";
+  static const String wallet = "assets/images/wallet.png";
+  static const String box = "assets/images/box.png";
+  static const String logoTransparent = "assets/images/logo_transparent.png";
+  static const String whatsappOutlined = "assets/images/whatsapp_outlined.png";
+  static const String phoneSecondary = "assets/images/phone_secondary.png";
 }

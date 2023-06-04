@@ -11,14 +11,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var drawerProvider = Provider.of<AppDrawerProvider>(context);
     return Scaffold(
-      body: Center(
-        child: Center(
-          child: ElevatedButton(
-            child: Text("Open drawer"),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            HomeNavigationBar(),
+            Center(
+              child: ElevatedButton(
+                child: Text("Open drawer"),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );

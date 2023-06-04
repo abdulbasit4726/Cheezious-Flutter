@@ -4,7 +4,7 @@ import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import '/utils/constants/constants.dart';
 
 class CustomIcon extends StatelessWidget {
-  Color backgroundColor;
+  Color? backgroundColor;
   String icon;
   double iconSize;
   bool isGradient;
@@ -25,7 +25,9 @@ class CustomIcon extends StatelessWidget {
       onPressed: onPress,
       duration: const Duration(milliseconds: 700),
       child: Container(
-        padding: const EdgeInsets.all(AppSpacing.small),
+        padding: backgroundColor != null
+            ? const EdgeInsets.all(AppSpacing.small)
+            : EdgeInsets.zero,
         decoration: BoxDecoration(
           color: backgroundColor,
           gradient: isGradient
@@ -46,16 +48,6 @@ class CustomIcon extends StatelessWidget {
           height: iconSize,
           fit: BoxFit.contain,
         ),
-        // IconButton(
-        //   padding: EdgeInsets.zero,
-        //   constraints: const BoxConstraints(),
-        //   // splashRadius: 1.0,
-        //   icon: Image.asset(
-        //     icon,
-        //   ),
-        //   iconSize: iconSize,
-        //   onPressed: onPress,
-        // ),
       ),
     );
   }

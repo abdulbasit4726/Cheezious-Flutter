@@ -1,8 +1,8 @@
-import 'package:cheezious_user/screens/Home/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 import '/utils/constants/constants.dart';
 import '/screens/screens.dart';
+import '/widgets/widgets.dart';
 
 class BottomAppNavigationScreen extends StatefulWidget {
   static const routeName = "/BottomAppNavigationScreen";

@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import './screens/screens.dart';
 import '/utils/utils.dart';
+import '/navigators/navigators.dart';
 import '/providers/providers.dart';
 
 void main() {

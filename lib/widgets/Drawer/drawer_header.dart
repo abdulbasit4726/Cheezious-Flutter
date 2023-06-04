@@ -16,6 +16,7 @@ class AppDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: CustomColors.scaffoldBackground,
       padding: const EdgeInsets.symmetric(
           horizontal: AppSpacing.large, vertical: AppSpacing.medium),
       height: 200,

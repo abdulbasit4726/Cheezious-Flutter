@@ -39,8 +39,8 @@ class AppTextStyles {
 
   static const regularTextSemiBold = TextStyle(
     fontFamily: AppFonts.semiBold,
-    fontSize: 14,
-    fontWeight: FontWeight.w600,
+    fontSize: 15,
+    fontWeight: FontWeight.w500,
     color: CustomColors.darkText,
   );
 
@@ -81,7 +81,7 @@ class AppTextStyles {
 
   static const bottomTabLabel = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: FontWeight.w600,
     color: CustomColors.darkText,
   );
