@@ -8,6 +8,7 @@ class CustomIcon extends StatelessWidget {
   String icon;
   double iconSize;
   bool isGradient;
+  double backgroundPadding;
   VoidCallback? onPress;
 
   CustomIcon({
@@ -15,6 +16,7 @@ class CustomIcon extends StatelessWidget {
     this.backgroundColor = Colors.white,
     this.iconSize = 24.0,
     this.onPress,
+    this.backgroundPadding = AppSpacing.small,
     this.isGradient = false,
     required this.icon,
   });
@@ -26,7 +28,7 @@ class CustomIcon extends StatelessWidget {
       duration: const Duration(milliseconds: 700),
       child: Container(
         padding: backgroundColor != null
-            ? const EdgeInsets.all(AppSpacing.small)
+            ? EdgeInsets.all(backgroundPadding)
             : EdgeInsets.zero,
         decoration: BoxDecoration(
           color: backgroundColor,

@@ -36,4 +36,14 @@ class ImageNames {
   static const String logoTransparent = "assets/images/logo_transparent.png";
   static const String whatsappOutlined = "assets/images/whatsapp_outlined.png";
   static const String phoneSecondary = "assets/images/phone_secondary.png";
+  static const String sideMenu = "assets/images/side_menu.png";
+  static const String cart = "assets/images/cart.png";
+  static const String chairTable = "assets/images/chair_table.png";
+  static const String carStore = "assets/images/car_store.png";
+  static const String locationSecondary =
+      "assets/images/location_secondary.png";
+  static const String manCar = "assets/images/man_car.png";
+  static const String storeSecondary = "assets/images/store_secondary.png";
+  static const String topup = "assets/images/topup.png";
+  static const String walletSecondary = "assets/images/wallet_secondary.png";
 }

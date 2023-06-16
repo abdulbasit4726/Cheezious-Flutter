@@ -24,10 +24,15 @@ class AppDrawerItem extends StatelessWidget {
             onPressed: onPress,
             duration: const Duration(milliseconds: 700),
             child: ListTile(
-              leading: Image.asset(icon, width: 23, height: 23),
+              leading: Image.asset(icon, width: 22, height: 22),
               title: Text(
                 title,
-                style: AppTextStyles.regularTextSemiBold,
+                style: const TextStyle(
+                  fontFamily: AppFonts.regular,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: -0.5,
+                ),
               ),
               trailing: const Icon(
                 Icons.chevron_right,

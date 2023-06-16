@@ -25,42 +25,42 @@ class AppFonts {
 class AppTextStyles {
   static const regularTextLight = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: FontWeight.w400,
     color: CustomColors.lightText,
   );
 
   static const regularText = TextStyle(
     fontFamily: AppFonts.regular,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: FontWeight.w400,
     color: CustomColors.darkText,
   );
 
   static const regularTextSemiBold = TextStyle(
     fontFamily: AppFonts.semiBold,
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: FontWeight.w500,
     color: CustomColors.darkText,
   );
 
   static const darkButtonStyle = TextStyle(
     fontFamily: AppFonts.extraBold,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     color: CustomColors.darkText,
   );
 
   static const whiteButtonStyle = TextStyle(
     fontFamily: AppFonts.extraBold,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     color: Colors.white,
   );
 
   static const secondaryButtonStyle = TextStyle(
     fontFamily: AppFonts.extraBold,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     color: CustomColors.secondary,
   );
@@ -76,6 +76,13 @@ class AppTextStyles {
     fontFamily: AppFonts.bold,
     fontSize: 18,
     fontWeight: FontWeight.w700,
+    color: CustomColors.darkText,
+  );
+
+  static const headingStyle = TextStyle(
+    fontFamily: AppFonts.regular,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
     color: CustomColors.darkText,
   );
 
